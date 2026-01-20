@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A + D 💌</title>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Comic Sans MS", cursive;
+  background: linear-gradient(to bottom, #fff5fa, #ffe0f0);
+  overflow-x: hidden;
+  position: relative;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+  transform: rotate(-3deg);
+  margin-top: 50px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+h1:hover { transform: rotate(0deg) scale(1.1); }
+
+.letter, .note {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  border: 3px dashed pink;
+  transform: rotate(2deg);
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 5px 5px 15px rgba(255, 192, 203, 0.4);
+  cursor: pointer;
+}
+
+button {
+  background: pink;
+  border: 2px solid hotpink;
+  padding: 10px 20px;
+  transform: rotate(-2deg);
+  cursor: pointer;
+  font-size: 16px;
+  margin: 20px;
+  transition: transform 0.2s, background 0.2s;
+}
+button:hover { transform: rotate(-2deg) scale(1.1); background: #ffb6c1; }
+
+.sticker {
+  font-size: 30px;
+  position: absolute;
+  animation: floatSticker 5s ease-in-out infinite;
+}
+
+@keyframes floatSticker {
+  0%, 100% { transform: translateY(0px) rotate(0deg);}
+  50% { transform: translateY(-15px) rotate(15deg);}
+}
+
+ul {
+  text-align: left;
+  display: inline-block;
+  margin-top: 0;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  margin: 5px 0;
+}
+
+ul li:hover {
+  color: hotpink;
+}
+
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px;
+}
+
+.photo-grid img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 3px solid pink;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.1) rotate(3deg);
+}
+
+video {
+  margin: 15px 0;
+  width: 300px;
+  border: 3px solid pink;
+  border-radius: 10px;
+}
+
+.note-content {
+  display: none;
+  font-weight: bold;
+  color: hotpink;
+  margin-top: 10px;
+}
+</style>
+</head>
+<body>
+
+<!-- Floating stickers -->
+<div class="sticker" style="top:20px;left:10px;">🦆</div>
+<div class="sticker" style="top:60px;right:20px;">🐸</div>
+<div class="sticker" style="top:120px;left:40px;">⭐</div>
+<div class="sticker" style="top:200px;right:50px;">🌸</div>
+<div class="sticker" style="top:300px;left:150px;">🍓</div>
+
+<h1>A + D 💌</h1>
+
+<div class="letter">
+<p>
+Hiii Babyy 💖  
+Happy Valentine’s Day!!! 🥰  
+ILYSMMMM 😘😘  
+You make my heart do silly little backflips every single day 💕  
+Every little thing about you is the cutest thing ever 🐸🦆⭐  
+Can’t wait for all our silly adventures together 💌💗  
+you+me foreverrrrr! 💞
+</p>
+</div>
+
+<button onclick="showLove()">click if you love me</button>
+
+<h3>10 things(or more) i love about you</h3>
+<ul id="loveList">
+<li>(cheesy and common ik but) your brownest brown eyes</li>
+<li>your increasingly worsening humor</li>
+<li>your sleepy voice</li>
+<li>our pre-dating dates</li>
+<li>that tiny beard that pinches me</li>
+<li>the way you listen to me</li>
+<li>mickies and minnies</li>
+<li>HOT GOSS moments</li>
+  <li>doing nothing with you</li>
+  <li>the way you look at me</li>
+  <li>your laugh</li>
+  <li>your adorable little face</li>
+  <li>i love loving you</li>
+</ul>
+
+<h3>❤️ Our Photos ❤️</h3>
+<div class="photo-grid">
+  <img src="photo1.jpg" alt="Photo 1" data-images='["photo1.jpg","photo2.jpg","photo3.jpg"]'>
+  <img src="photo2.jpg" alt="Photo 2" data-images='["photo2.jpg","photo4.jpg","photo5.jpg"]'>
+  <img src="photo3.jpg" alt="Photo 3" data-images='["photo3.jpg","photo6.jpg","photo7.jpg"]'>
+</div>
+
+<h3>🎥 Our Videos 🎥</h3>
+<video controls>
+  <source src="video1.mp4" type="video/mp4">
+</video>
+
+<h3>💌 Love Notes 💌</h3>
+<div class="note" onclick="toggleNote(this)">
+  Click to read a love note!
+  <p class="note-content">
+ Hey you 💖  
+I don’t even know how to explain it…  
+but somehow, every time I think of you, my heart just… does this happy little flip 🥺💌  
+You make the dumbest days feel magical, the quietest moments feel like the loudest laughs,  
+and somehow… you make me fall in love all over again, every single day 😘💗 
+    I still can’t believe this sometimes 💖  
+In my head, we’ve already been married for like… four years 🥰  
+But then I remember that very call, and it feels like it was just yesterday  
+when I was shaking and trembling, so sure that the girl you liked wasn’t me 🥺  
+And now… here we are. You’re mine, I’m yours, and it feels both unreal and perfect at the same time 💌  
+I'm so happy that i didn't let the fear of relationships stop me from  crushing on you hard, saying yes to you and loving you 
+    I love you more than I ever imagined I could 💕.
+    
+So yeah… ILYSM, and I wouldn’t trade a single second with you for anything in the world 💕
+  </p>
+</div>
+
+<div class="note" onclick="toggleNote(this)">
+  Another secret note!
+  <p class="note-content">
+    I want you to know something, really know it 💖
+You are enough for me, in this life, in any life, in every version of the universe.
+I can’t imagine loving anyone else, not even in a different story, not even in another world. If it isn’t you, it just isn’t love.
+
+I love everything about you, even that little beard that pinches me and makes me pretend I’m annoyed when I’m really not 🥺
+I miss you every second we’re not together.
+I miss talking to you, looking into your brown eyes, just being near you.
+I love laughing with you till my stomach hurts, joking about the dumbest things, playing with your hair and your adorable little face.
+
+I love being in love with you.
+Sometimes I catch myself imagining our future, us living together, married, doing nothing special, spending our adult money on the most useless things but still feeling like everything is perfect 💌
+And every time I see a new message, my heart secretly hopes it’s you.
+
+You make me feel safe.
+You make me feel chosen.
+And I hope you always know that for me, there could never be anyone else. 🤍 😘
+  </p>
+</div>
+
+<script>
+// Falling hearts
+setInterval(() => {
+  let heart = document.createElement("div");
+  heart.innerHTML = "💗";
+  heart.style.position = "fixed";
+  heart.style.left = Math.random()*100 + "vw";
+  heart.style.top = "-10px";
+  heart.style.fontSize = Math.random()*20+20+"px";
+  document.body.appendChild(heart);
+
+  let fall = setInterval(() => {
+    heart.style.top = parseInt(heart.style.top) + 2 + "px";
+  }, 30);
+
+  setTimeout(()=>{ clearInterval(fall); heart.remove(); },4000);
+},300);
+
+// Button heart burst
+function showLove() {
+  alert("CONGRATS YOU LOVE ME 💖");
+  for(let i=0;i<30;i++){
+    let h = document.createElement("div");
+    h.innerHTML = "💖";
+    h.style.position = "fixed";
+    h.style.left = Math.random()*100 + "vw";
+    h.style.top = "50vh";
+    h.style.fontSize = Math.random()*20+15+"px";
+    h.style.transition = "all 1s ease-out";
+    document.body.appendChild(h);
+    setTimeout(()=>{
+      h.style.top = (Math.random()*100)+"vh";
+      h.style.left = (Math.random()*100)+"vw";
+      h.style.opacity = 0;
+    },50);
+    setTimeout(()=>{h.remove()},1000);
+  }
+}
+
+// Love notes click-to-reveal with soft heart
+function toggleNote(note) {
+  let content = note.querySelector(".note-content");
+  if(content.style.display==="block"){
+    content.style.display="none";
+  } else {
+    content.style.display="block";
+    createHeart(note);
+  }
+}
+
+function createHeart(parent){
+  let heart = document.createElement("div");
+  heart.innerHTML = "💖";
+  heart.style.position = "absolute";
+  heart.style.left = "50%";
+  heart.style.top = "0";
+  heart.style.transform = "translateX(-50%)";
+  heart.style.fontSize = "24px";
+  heart.style.opacity = 1;
+  parent.appendChild(heart);
+  let top=0;
+  let id = setInterval(()=>{
+    top+=2;
+    heart.style.top = top+"px";
+    heart.style.opacity -= 0.02;
+    if(heart.style.opacity <= 0){ clearInterval(id); heart.remove(); }
+  },20);
+}
+
+// Photo click-to-swap with hearts
+document.querySelectorAll(".photo-grid img").forEach(img=>{
+  let images = JSON.parse(img.dataset.images);
+  let current = 0;
+  img.addEventListener("click", ()=>{
+    current = (current+1)%images.length;
+    img.src = images[current];
+    createPhotoHeart(img);
+  });
+});
+
+function createPhotoHeart(img){
+  let heart = document.createElement("div");
+  heart.innerHTML = "💖";
+  heart.style.position = "absolute";
+  heart.style.left = (img.offsetLeft + img.width/2) + "px";
+  heart.style.top = (img.offsetTop + img.height/2) + "px";
+  heart.style.fontSize = "24px";
+  heart.style.opacity = 1;
+  heart.style.transform = "translate(-50%, -50%)";
+  document.body.appendChild(heart);
+  let top=parseInt(heart.style.top);
+  let id = setInterval(()=>{
+    top-=2;
+    heart.style.top = top+"px";
+    heart.style.opacity -= 0.02;
+    if(heart.style.opacity <= 0){ clearInterval(id); heart.remove(); }
+  },20);
+}
+
+// Clickable list hearts
+document.querySelectorAll("#loveList li").forEach(li=>{
+  li.addEventListener("click", ()=>{
+    let heart = document.createElement("div");
+    heart.innerHTML = "💖";
+    heart.style.position = "absolute";
+    let rect = li.getBoundingClientRect();
+    heart.style.left = rect.left + rect.width/2 + "px";
+    heart.style.top = rect.top + "px";
+    heart.style.fontSize = "20px";
+    heart.style.opacity = 1;
+    document.body.appendChild(heart);
+    let top=parseInt(heart.style.top);
+    let id = setInterval(()=>{
+      top-=2;
+      heart.style.top = top+"px";
+      heart.style.opacity -= 0.02;
+      if(heart.style.opacity <= 0){ clearInterval(id); heart.remove(); }
+    },20);
+  });
+});
+</script>
+</body>
+</html>
